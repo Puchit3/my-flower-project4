@@ -1365,7 +1365,7 @@ z-index: 1; / ให้อยู่เหนือ .night */
 audio {
 /* ปรับสไตล์ของ audio tag ให้อยู่ด้านล่างและกึ่งกลาง /
 width: 90%; / ปรับความกว้างตามต้องการ */
-max-width: 400px;
+max-width: 200px;
 margin-top: 20px;
 margin-bottom: 20px;
 }
