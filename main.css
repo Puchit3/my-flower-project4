@@ -1335,4 +1335,39 @@ body {
 .container * {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
+  ```css
+.container {
+/* ... CSS อื่นๆ ที่มีอยู่ ... /
+display: flex;
+flex-direction: column; / จัดเรียงองค์ประกอบภายในเป็นแนวตั้ง /
+justify-content: center; / จัดตำแหน่งกึ่งกลางตามแนวตั้ง /
+align-items: center; / จัดตำแหน่งกึ่งกลางตามแนวนอน /
+min-height: 100vh; / ทำให้คอนเทนเนอร์ครอบคลุมความสูงของ viewport /
+position: relative; / สำหรับการจัดตำแหน่ง .night และ .flowers แบบซ้อนทับ */
+}
+
+.night {
+/* ... CSS อื่นๆ ที่มีอยู่ ... /
+position: fixed; / หรือ absolute ขึ้นอยู่กับการออกแบบ /
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1; / ให้อยู่ด้านหลังดอกไม้ */
+}
+
+.flowers {
+/* ... CSS อื่นๆ ที่มีอยู่ ... /
+position: relative; / เพื่อให้สามารถจัดตำแหน่งภายในได้ /
+z-index: 1; / ให้อยู่เหนือ .night */
+}
+
+audio {
+/* ปรับสไตล์ของ audio tag ให้อยู่ด้านล่างและกึ่งกลาง /
+width: 90%; / ปรับความกว้างตามต้องการ */
+max-width: 400px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+```
 }
