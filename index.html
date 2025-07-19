@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คิดไงก็ไม่รู้แค่อยากทำ</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); /* ไล่เฉดสีฟ้า-ม่วงเข้ม */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Sarabun', sans-serif; /* ใช้ฟอนต์ Sarabun */
+            color: #ffffff; /* สีข้อความเป็นสีขาว */
+            text-align: center;
+            animation: fadeInBackground 1.5s ease-out forwards;
+        }
+
+        /* นำเข้า Google Fonts สำหรับ Sarabun */
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap');
+
+        .start-container {
+            padding: 40px;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.05); /* พื้นหลังโปร่งแสงเล็กน้อย */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* เงาเข้มๆ */
+            backdrop-filter: blur(10px); /* เอฟเฟกต์เบลอพื้นหลัง */
+            animation: slideIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        h1 {
+            font-size: 3em; /* ขนาดใหญ่ขึ้น */
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            animation: textPopUp 1s ease-out forwards 0.5s;
+            opacity: 0;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            animation: textPopUp 1s ease-out forwards 0.7s;
+            opacity: 0;
+        }
+
+        .start-button {
+            padding: 15px 40px;
+            font-size: 1.5em;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #00ffdd; /* สีแดงอมชมพูสดใส */
+            color: white;
+            border: none;
+            border-radius: 50px; /* ปุ่มกลมมน */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            animation: buttonScaleIn 1s ease-out forwards 1s;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .start-button:hover {
+            background-color: #ff00d4; /* สีเข้มขึ้นเมื่อโฮเวอร์ */
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeInBackground {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes textPopUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes buttonScaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="start-container">
+        <h1>You belong here, more than anyone.</h1>
+        <p>you’re perfect.</p>
+        <button class="start-button" id="startButton">This is a present from Mr. Puchit</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const startButton = document.getElementById('startButton');
+
+            startButton.addEventListener('click', () => {
+                // เปลี่ยนหน้าไปยัง index.html
+                window.location.href = 'st.html';
+            });
+        });
+    </script>
+</body>
+</html>
